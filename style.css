@@ -1,0 +1,11 @@
+#teclado{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px
+}
+
+button{
+    border-radius: 99%;
+    width: 29px;
+    height: 31px;
+}
