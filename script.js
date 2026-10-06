@@ -31,14 +31,105 @@ function atualizarDisplay(){
         display.value = valorAtual;
     }
 }
-
+btnC.addEventListener("click",
+    function(){
+        valorAtual = ""
+        valorAnterior = ""
+        operacao = null
+        atualizarDisplay()
+    }
+)
 function adicionarNumero(numero){
     valorAtual = valorAtual + numero;
     atualizarDisplay();
 }
-
 btn9.addEventListener("click",
     function (){
         adicionarNumero("9")
     }
 )
+
+btn8.addEventListener("click",
+    function (){
+        adicionarNumero("8")
+    }
+)
+
+btn7.addEventListener("click",
+    function (){
+        adicionarNumero("7")
+    }
+)
+
+btn6.addEventListener("click",
+    function (){
+        adicionarNumero("6")
+    }
+)
+
+btn5.addEventListener("click",
+    function (){
+        adicionarNumero("5")
+    }
+)
+
+btn4.addEventListener("click",
+    function (){
+        adicionarNumero("4")
+    }
+)
+
+btn3.addEventListener("click",
+    function (){
+        adicionarNumero("3")
+    }
+)
+
+btn9.addEventListener("click",
+    function (){
+        adicionarNumero("2")
+    }
+)
+
+btn1.addEventListener("click",
+    function (){
+        adicionarNumero("1")
+    }
+)
+btn0.addEventListener("click",
+    function (){
+        adicionarNumero("0")
+    }
+)
+
+
+function selecionarOperacao(operando){
+    if(valorAtual ===""){
+        return;
+    }
+    valorAnterior = valorAtual;
+    operando = operacao
+    valorAtual = "",
+}
+btnSomar.addEventListener("click", function(){
+    
+        selecionarOperacao("+");
+    }
+)
+function calcular(){
+
+    const numeroAnterior = Number(valorAnterior);
+    const numeroAtual = Number(valorAtual);
+
+    let resultado;
+
+    if(operacao === "+"){
+        resultado = numeroAnterior + numeroAtual;
+    }
+
+    valorAtual = String(resultado);
+    valorAnterior = "";
+    operacao = null;
+
+}
+
